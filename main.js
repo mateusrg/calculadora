@@ -116,10 +116,11 @@ function executaEquacao() {
             // A linha de baixo ficou confusa, mas ela só garante que o resultado tenha, no máximo, 7 dígitos (sem contar o ponto)
             resultado = resultado.toFixed(Math.min(resultado.toString().length, 7 - resultado.toString().split(".")[0].length));
         }
-        if (isNaN(resultado)) {
+        if (isNaN(resultado) || resultado === Infinity) {
             // Caso a pessoa faça um cálculo que o JavaScript não considere como uma exceção, essa parte verifica se o resultado é realmente
             // um número. Ele pega, por exemplo, divisões por 0, que não dão erro mas o resultado fica como "undefined". Essa parte do código
             // torna qualquer valor não numérico "erro".
+            // PS: Aparentemente, Infinity é considerado número. Então acrescentei isso na verificação. 
             textoVisor.innerHTML = "erro";
             return
         }

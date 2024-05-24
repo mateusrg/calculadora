@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --cinzaEscuro: #333;
+    --preto: #000;
+    --branco: #fff;
+    --cinzaMedio: #505050;
+    --cinzaClaro: #a6a6a6;
+    --laranja: #ff9500;
+    --numeroHover: #636363;
+    --funcaoHover: #6a6a6a;
+    --operadorHover: #d67d00;
+    --numeroClick: #5d5d5d;
+    --funcaoClick: #626262;
+    --operadorClick: #cb7700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+    border: none;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 700px;
+    width: 420px;
+}
+
+#visor {
+    height: 120px;
+    background-color: var(--preto);
+    border-radius: 40px 40px 0px 0px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 24px;   
+}
+
+#textoVisor {
+    font-size: 80px;
+    color: var(--branco);
+}
+
+#botoes {
+    padding: 16px 13px 24px 13px;
+    height: 497px;
+    width: 394px;
+    background-color: var(--cinzaEscuro);
+    border-radius: 0px 0px 40px 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "C abreParenteses fechaParenteses divisao"
+                         "sete oito nove multiplicacao"
+                         "quatro cinco seis subtracao"
+                         "um dois tres adicao"
+                         "zero zero virgula igualdade";
+}
+
+#C {
+    grid-area: C;
+}
+
+#abreParenteses {
+    grid-area: abreParenteses;
+}
+
+#fechaParenteses {
+    grid-area: fechaParenteses;
+}
+
+#divisao {
+    grid-area: divisao;
+}
+
+#sete {
+    grid-area: sete;
+}
+
+#oito {
+    grid-area: oito;
+}
+
+#nove {
+    grid-area: nove;
+}
+
+#multiplicacao {
+    grid-area: multiplicacao;
+}
+
+#quatro {
+    grid-area: quatro;
+}
+
+#cinco {
+    grid-area: cinco;
+}
+
+#seis {
+    grid-area: seis;
+}
+
+#subtracao {
+    grid-area: subtracao;
+}
+
+#um {
+    grid-area: um;
+}
+
+#dois {
+    grid-area: dois;
+}
+
+#tres {
+    grid-area: tres;
+}
+
+#adicao {
+    grid-area: adicao;
+}
+
+#zero {
+    grid-area: zero;
+    width: 186px;
+}
+
+#virgula {
+    grid-area: virgula;
+}
+
+#igualdade {
+    grid-area: igualdade;
+}
+
+
+button {
+    height: 85px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    margin: auto;
+}
+
+.numero {
+    background-color: var(--cinzaMedio);
+    color: var(--branco);
+}
+
+.operador {
+    background-color: var(--laranja);
+    color: var(--branco);
+}
+
+.funcao {
+    background-color: var(--cinzaClaro);
+    color: var(--preto);
+}
+
+.numero:hover {
+    background-color: var(--numeroHover);
+}
+
+.operador:hover {
+    background-color: var(--operadorHover);
+}
+
+.funcao:hover {
+    background-color: var(--funcaoHover);
+}
+
+.numero:active {
+    background-color: var(--numeroClick);
+}
+
+.operador:active {
+    background-color: var(--operadorClick);
+}
+
+.funcao:active {
+    background-color: var(--funcaoClick);
+}
